@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de API</title>
+</head>
+<body>
+    
+    <div id="app">
+        <h1>{{title}}</h1>
+
+        <hr>
+        <button @click="leerAPI">Consultar</button>
+        <hr>
+        <input type="text" name="cedula" v-model="cedula"><br>
+        <input type="text" name="contrasena" v-model = "contrasena">
+        <button @click="login">Login</button>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="consumoAPI.js"></script>
+</body>
+</html>

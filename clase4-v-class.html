@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <h3>{{title}}</h3>
+        <div  :class=" ['text-white','p-3', fondo ]">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi suscipit labore eveniet saepe impedit maxime fugit ex, possimus, eum doloremque nobis recusandae enim sed illo modi sequi esse iure.</p>
+        </div>
+        <input type="text" name="" id="" class="form-control my-3" v-model='fondo'> 
+        <hr>
+        <div  :class=" ['text-dark','p-3', {'bg-primary': color, 'bg-warning':!color}]">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi suscipit labore eveniet saepe impedit maxime fugit ex, possimus, eum doloremque nobis recusandae enim sed illo modi sequi esse iure.</p>
+        </div>          
+        <button :class="['btn btn-success', 'mt-2']" @click="color = !color">Cambiar fondo</button>      
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="clase4-v-class.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

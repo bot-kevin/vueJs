@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="clase7-compoente-saludo.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <h3>{{saludo}}</h3>
+        <saludo></saludo>
+    </div>
+
+    <script>
+
+        Vue.component('saludo', {
+            template:'<h3>{{saludo}}</h3>',
+            data(){
+                return {
+                    saludo: 'Es el saludo del template'
+                }
+            }
+        })
+
+        new Vue({
+            el:'#app',
+            data:{
+                saludo: 'saludo desde vue'
+            }
+        })
+    </script>
+
+</body>
+</html>

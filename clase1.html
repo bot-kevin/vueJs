@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--CON VUE SIEMPRE DEVEMOS ENSERRAR TODO EN UN CONTAINER-->
+    <div id="app">
+        <h1>{{titulo}}</h1>
+
+        <!--CALLING UNO POR UNO-->
+        <a href="" >{{frutas[0]}}</a>
+        <a href="" >{{frutas[1]}}</a>
+        <a href="" >{{frutas[2]}}</a>}
+
+        <!--UTILIZANDO UN LOOP FOR OF -->
+        <ul>
+            <li v-for="i of frutas">{{i}}</li>
+        </ul>
+        <hr>
+        <ul>
+            <li v-for="i of persona">Nombre: {{i.nombre}} Cantidad: {{i.cantiadad}}
+                <!--CONDICIONAL IF CUANDO LA CANTIDAD SEA IGUAL A 0 -->
+                <span v-if="i.cantiadad === 0 ">Sin stock</span>
+            </li>
+            
+        </ul>
+
+    </div>
+    <hr>
+
+    <!--   CREAMOS OTRO CONTAINER-->
+
+    <div id="app2">
+        <span v-bind:title="mensaje">
+            Deje el raton unos instantes y puede ver el mensaje
+        </span>
+    </div>
+
+    <hr>
+    <div id="app3">
+        <span v-if = "ver">Este contenido se puede ver si solo es true</span>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="01.js"></script>
+</body>
+</html>
